@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - I-RAPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Learn about the I-RAPTOR tool and how it helps developers find inspiration for their next coding project.">
+</head>
+<body class="fade-in">
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i> I-RAPTOR
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="generator.html" class="nav-link">Generator</a></li>
+                <li><a href="saved.html" class="nav-link">Saved Ideas</a></li>
+                <li><a href="submit.html" class="nav-link">Submit Idea</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li>
+                    <div class="dark-mode-toggle" id="darkModeToggle"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="about-section">
+        <div class="container">
+            <div class="text-center animated">
+                <h1>About <span class="text-gradient">I-RAPTOR</span></h1>
+                <p>Your source for endless coding project inspiration</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Developer coding on laptop">
+                </div>
+                
+                <div class="about-text slide-in-right">
+                    <h2>Our Mission</h2>
+                    <p>I-RAPTOR is designed to help developers, students, and hobbyists find inspiration for their next programming project. Whether you're looking to build your portfolio, learn a new technology, or just have fun coding, we're here to spark your creativity.</p>
+                    
+                    <p>Our database includes project ideas ranging from simple beginner-friendly tasks to complex advanced challenges across various domains including web development, IoT, artificial intelligence, electronics, and more.</p>
+                    
+                    <p>We believe that the best way to learn programming is by working on real projects. Our tool aims to eliminate "blank canvas syndrome" by providing you with exciting project ideas tailored to your interests and skill level.</p>
+                </div>
+            </div>
+            
+            <div class="steps animated" style="animation-delay: 0.3s;">
+                <h2 class="text-center">How It Works</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Filters</h3>
+                        <p>Select a category that interests you and a difficulty level that matches your skills. This helps us find the perfect project for your specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Generate an Idea</h3>
+                        <p>Click the generate button to receive a random project idea based on your selected filters. Each idea includes a title, category, difficulty level, and detailed description.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Save or Generate More</h3>
+                        <p>If you like an idea, save it to your collection for later reference. Otherwise, generate more ideas until you find one that excites you.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Building</h3>
+                        <p>Once you've found the perfect project, start coding! Use the project description as a guide, but feel free to add your own unique features and approaches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>Get In <span class="text-gradient">Touch</span></h2>
+                <p>Have questions, suggestions, or feedback? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>contact@iraptor.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Silicon Valley, California, USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Social</h3>
+                            <p>Follow us on GitHub, Twitter, and LinkedIn</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" placeholder="Your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Message:</label>
+                        <textarea id="contact-message" rows="5" placeholder="Your message"></textarea>
+                    </div>
+                    
+                    <button type="button" id="send-message" class="form-button btn-ripple">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container text-center">
+            <h2>Ready to Find Your <span class="text-gradient">Next Project</span>?</h2>
+            <p>Start generating ideas now!</p>
+            <a href="generator.html" class="btn btn-accent btn-lg btn-3d pulse" style="margin-top: 2rem;">
+                <i class="fas fa-magic"></i> Try the Generator
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>I-RAPTOR</h3>
+                    <p>Find inspiration for your next coding project with our easy-to-use generator tool.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="generator.html">Generator</a></li>
+                        <li><a href="saved.html">Saved Ideas</a></li>
+                        <li><a href="submit.html">Submit Idea</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="generator.html?category=web">Web Development</a></li>
+                        <li><a href="generator.html?category=iot">IoT Projects</a></li>
+                        <li><a href="generator.html?category=ai">AI/ML Projects</a></li>
+                        <li><a href="generator.html?category=electronics">Electronics</a></li>
+                        <li><a href="generator.html?category=mini">Mini Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> I-RAPTOR. All rights reserved.
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    <script>
+        // Simple contact form functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const sendBtn = document.getElementById('send-message');
+            if (sendBtn) {
+                sendBtn.addEventListener('click', () => {
+                    const name = document.getElementById('contact-name').value;
+                    const email = document.getElementById('contact-email').value;
+                    const message = document.getElementById('contact-message').value;
+                    
+                    if (name && email && message) {
+                        // In a real application, this would send data to a server
+                        alert('Thank you for your message! We\'ll get back to you soon.');
+                        // Clear the form
+                        document.getElementById('contact-name').value = '';
+                        document.getElementById('contact-email').value = '';
+                        document.getElementById('contact-message').value = '';
+                    } else {
+                        alert('Please fill out all fields before sending.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
