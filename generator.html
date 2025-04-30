@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Project Ideas - I-RAPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Generate customized project ideas based on your interests and skill level. Find your next coding challenge now!">
+</head>
+<body class="fade-in">
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i> I-RAPTOR
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="generator.html" class="nav-link active">Generator</a></li>
+                <li><a href="saved.html" class="nav-link">Saved Ideas</a></li>
+                <li><a href="submit.html" class="nav-link">Submit Idea</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li>
+                    <div class="dark-mode-toggle" id="darkModeToggle"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="generator-section">
+        <div class="container">
+            <div class="text-center animated">
+                <h1>Generate Your <span class="text-gradient">Perfect Project</span></h1>
+                <p>Customize your search to find the ideal coding challenge that matches your interests and skill level.</p>
+            </div>
+            
+            <div class="generator-container slide-in-left">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category" class="filter-label">Project Category:</label>
+                        <select id="category">
+                            <option value="all">All Categories</option>
+                            <option value="web">Web Development</option>
+                            <option value="iot">IoT</option>
+                            <option value="ai">AI/ML</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="mini">Mini Projects</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="difficulty" class="filter-label">Difficulty Level:</label>
+                        <select id="difficulty">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button id="generate-btn" class="generate-btn btn-ripple">
+                    <i class="fas fa-magic"></i> Generate Project Idea
+                </button>
+                
+                <div id="idea-container" class="idea-container hidden zoom-in">
+                    <div class="idea-header">
+                        <h2 id="idea-title" class="idea-title">Project Title</h2>
+                        <div class="idea-meta">
+                            <span id="idea-category" class="tag">Category</span>
+                            <span id="idea-difficulty" class="tag">Difficulty</span>
+                        </div>
+                    </div>
+                    
+                    <p id="idea-description" class="idea-description">Project description will appear here.</p>
+                    
+                    <div class="idea-actions">
+                        <button id="save-idea" class="action-button save-idea btn-ripple">
+                            <i class="fas fa-bookmark"></i> Save Idea
+                        </button>
+                        <button id="generate-new" class="action-button generate-new btn-ripple">
+                            <i class="fas fa-sync-alt"></i> Generate New
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <div class="text-center">
+                <h2>How to Use the <span class="text-gradient">Generator</span></h2>
+                <p>Follow these simple steps to find your perfect project idea</p>
+            </div>
+            
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose Your Filters</h3>
+                        <p>Select a category and difficulty level that matches your interests and skills.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Generate an Idea</h3>
+                        <p>Click the generate button to receive a random project idea based on your filters.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Save or Generate More</h3>
+                        <p>Bookmark ideas you like or generate more until you find the perfect project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="generator-section">
+        <div class="container text-center">
+            <h2>Want to Contribute?</h2>
+            <p>Share your own project ideas with the community!</p>
+            <a href="submit.html" class="btn btn-primary btn-lg btn-3d" style="margin-top: 2rem;">
+                <i class="fas fa-plus-circle"></i> Submit Your Idea
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>I-RAPTOR</h3>
+                    <p>Find inspiration for your next coding project with our easy-to-use generator tool.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="generator.html">Generator</a></li>
+                        <li><a href="saved.html">Saved Ideas</a></li>
+                        <li><a href="submit.html">Submit Idea</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="generator.html?category=web">Web Development</a></li>
+                        <li><a href="generator.html?category=iot">IoT Projects</a></li>
+                        <li><a href="generator.html?category=ai">AI/ML Projects</a></li>
+                        <li><a href="generator.html?category=electronics">Electronics</a></li>
+                        <li><a href="generator.html?category=mini">Mini Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> I-RAPTOR. All rights reserved.
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/generator.js"></script>
+</body>
+</html>
