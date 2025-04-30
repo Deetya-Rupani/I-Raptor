@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Project Idea - I-RAPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Submit your own project ideas to help others find inspiration for their next coding challenge.">
+</head>
+<body class="fade-in">
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i> I-RAPTOR
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="generator.html" class="nav-link">Generator</a></li>
+                <li><a href="saved.html" class="nav-link">Saved Ideas</a></li>
+                <li><a href="submit.html" class="nav-link active">Submit Idea</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li>
+                    <div class="dark-mode-toggle" id="darkModeToggle"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="submit-section">
+        <div class="container">
+            <div class="text-center animated">
+                <h1>Submit Your <span class="text-gradient">Project Idea</span></h1>
+                <p>Share your creative project ideas with the developer community!</p>
+            </div>
+            
+            <div class="form-container slide-in-left">
+                <form id="submit-form">
+                    <div class="form-group">
+                        <label for="idea-title">Project Title:</label>
+                        <input type="text" id="idea-title" required placeholder="Enter a descriptive title for your project idea">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-category">Category:</label>
+                        <select id="idea-category" required>
+                            <option value="">Select a category</option>
+                            <option value="web">Web Development</option>
+                            <option value="iot">IoT</option>
+                            <option value="ai">AI/ML</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="mini">Mini Projects</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-difficulty">Difficulty Level:</label>
+                        <select id="idea-difficulty" required>
+                            <option value="">Select difficulty level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="idea-description">Description:</label>
+                        <textarea id="idea-description" rows="6" required placeholder="Provide a detailed description of your project idea. Include any specific technologies, challenges, and goals for the project."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-button btn-ripple">
+                        <i class="fas fa-paper-plane"></i> Submit Idea
+                    </button>
+                </form>
+            </div>
+            
+            <div id="submission-success" class="submission-message hidden zoom-in">
+                <i class="fas fa-check-circle pulse"></i>
+                <h2>Thank You For Your Submission!</h2>
+                <p>Your project idea has been submitted successfully and added to our database.</p>
+                <div class="submission-actions">
+                    <button id="submit-another" class="btn btn-outline btn-3d">
+                        <i class="fas fa-plus"></i> Submit Another Idea
+                    </button>
+                    <a href="generator.html" class="btn btn-primary btn-3d">
+                        <i class="fas fa-magic"></i> Generate Ideas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container text-center">
+            <h2>Why <span class="text-gradient">Contribute</span>?</h2>
+            <p>Here's why your contribution matters</p>
+            
+            <div class="features-grid">
+                <div class="feature-card shimmer">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Help the Community</h3>
+                    <p class="feature-description">Your ideas can inspire other developers and help them learn new skills.</p>
+                </div>
+                
+                <div class="feature-card shimmer">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Share Knowledge</h3>
+                    <p class="feature-description">Spread awareness of interesting technologies and programming challenges.</p>
+                </div>
+                
+                <div class="feature-card shimmer">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="feature-title">Diversify Our Collection</h3>
+                    <p class="feature-description">Add unique project ideas that might not be in our existing database.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>I-RAPTOR</h3>
+                    <p>Find inspiration for your next coding project with our easy-to-use generator tool.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="generator.html">Generator</a></li>
+                        <li><a href="saved.html">Saved Ideas</a></li>
+                        <li><a href="submit.html">Submit Idea</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="generator.html?category=web">Web Development</a></li>
+                        <li><a href="generator.html?category=iot">IoT Projects</a></li>
+                        <li><a href="generator.html?category=ai">AI/ML Projects</a></li>
+                        <li><a href="generator.html?category=electronics">Electronics</a></li>
+                        <li><a href="generator.html?category=mini">Mini Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> I-RAPTOR. All rights reserved.
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/submit.js"></script>
+</body>
+</html>
