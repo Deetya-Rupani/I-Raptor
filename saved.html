@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Project Ideas - I-RAPTOR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="View and manage your saved project ideas for future coding adventures.">
+</head>
+<body class="fade-in">
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i> I-RAPTOR
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="generator.html" class="nav-link">Generator</a></li>
+                <li><a href="saved.html" class="nav-link active">Saved Ideas</a></li>
+                <li><a href="submit.html" class="nav-link">Submit Idea</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li>
+                    <div class="dark-mode-toggle" id="darkModeToggle"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="saved-ideas-section">
+        <div class="container">
+            <div class="text-center animated">
+                <h1>Your <span class="text-gradient">Saved Ideas</span></h1>
+                <p>Browse through your collection of bookmarked project ideas.</p>
+            </div>
+            
+            <div id="saved-ideas" class="saved-ideas-container">
+                <!-- Saved ideas will be populated here by JavaScript -->
+                <div id="no-saved-ideas" class="no-saved-ideas slide-in-left">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>No Saved Ideas Yet</h3>
+                    <p>You haven't saved any project ideas yet. Generate and bookmark ideas to see them here.</p>
+                    <a href="generator.html" class="btn btn-gradient btn-lg btn-ripple">
+                        <i class="fas fa-magic"></i> Generate Some Ideas
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <div id="manage-saved" class="manage-options hidden">
+                    <button id="clear-all" class="btn btn-outline">
+                        <i class="fas fa-trash-alt"></i> Clear All Saved Ideas
+                    </button>
+                    <button id="export-ideas" class="btn btn-primary">
+                        <i class="fas fa-file-export"></i> Export Ideas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="generator-section">
+        <div class="container text-center">
+            <h2>Need More <span class="text-gradient">Inspiration</span>?</h2>
+            <p>Return to the generator to discover more exciting project ideas.</p>
+            <a href="generator.html" class="btn btn-accent btn-lg btn-3d pulse" style="margin-top: 2rem;">
+                <i class="fas fa-magic"></i> Generate More Ideas
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>I-RAPTOR</h3>
+                    <p>Find inspiration for your next coding project with our easy-to-use generator tool.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="generator.html">Generator</a></li>
+                        <li><a href="saved.html">Saved Ideas</a></li>
+                        <li><a href="submit.html">Submit Idea</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="generator.html?category=web">Web Development</a></li>
+                        <li><a href="generator.html?category=iot">IoT Projects</a></li>
+                        <li><a href="generator.html?category=ai">AI/ML Projects</a></li>
+                        <li><a href="generator.html?category=electronics">Electronics</a></li>
+                        <li><a href="generator.html?category=mini">Mini Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="currentYear">2025</span> I-RAPTOR. All rights reserved.
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/saved.js"></script>
+    <script>
+        // Show management options only if there are saved ideas
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedIdeas = storageManager.getSavedIdeas();
+            if (savedIdeas.length > 0) {
+                document.getElementById('manage-saved').classList.remove('hidden');
+                
+                // Clear all saved ideas button
+                document.getElementById('clear-all').addEventListener('click', () => {
+                    if (confirm('Are you sure you want to clear all saved project ideas?')) {
+                        storageManager.clearSavedIdeas();
+                        window.location.reload();
+                    }
+                });
+                
+                // Export ideas as JSON
+                document.getElementById('export-ideas').addEventListener('click', () => {
+                    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(savedIdeas, null, 2));
+                    const downloadEl = document.createElement('a');
+                    downloadEl.setAttribute("href", dataStr);
+                    downloadEl.setAttribute("download", "project-ideas.json");
+                    document.body.appendChild(downloadEl);
+                    downloadEl.click();
+                    document.body.removeChild(downloadEl);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
