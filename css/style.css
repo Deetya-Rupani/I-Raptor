@@ -1279,73 +1279,7 @@ footer {
     transform: translateX(24px);
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #f8f9fa;
-}
 
-body.dark-mode header {
-    background-color: rgba(18, 18, 18, 0.95);
-}
-
-body.dark-mode .logo {
-    color: white;
-}
-
-body.dark-mode .hamburger span {
-    background-color: white;
-}
-
-body.dark-mode .generator-container,
-body.dark-mode .idea-container,
-body.dark-mode .saved-idea-card,
-body.dark-mode .contact-form,
-body.dark-mode .feature-card {
-    background-color: #1e1e1e;
-    box-shadow: var(--shadow-lg);
-}
-
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4 {
-    color: white;
-}
-
-body.dark-mode .nav-link {
-    color: var(--mid-gray);
-}
-
-body.dark-mode .nav-link:hover, 
-body.dark-mode .nav-link.active {
-    color: var(--primary-color);
-}
-
-body.dark-mode .feature-icon {
-    background-color: #2a2a2a;
-}
-
-body.dark-mode input, 
-body.dark-mode textarea, 
-body.dark-mode select {
-    background-color: #2a2a2a;
-    color: white;
-    border-color: #444;
-}
-
-body.dark-mode .generate-new {
-    background-color: #2a2a2a;
-    color: var(--light-gray);
-}
-
-body.dark-mode .tag {
-    background-color: #2a2a2a;
-}
-
-body.dark-mode .no-saved-ideas {
-    background-color: #1e1e1e;
-}
 
 /* Modal Styles */
 .modal-overlay {
@@ -1428,30 +1362,74 @@ body.dark-mode .modal-content {
     animation: zoomOut 0.3s ease forwards;
 }
 
-@keyframes zoomOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.8);
-    }
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
 }
 
-.fade-out {
-    animation: fadeOut 0.3s ease forwards;
+body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.95);
 }
 
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
+body.dark-mode .logo {
+    color: white;
+}
+
+body.dark-mode .hamburger span {
+    background-color: white;
+}
+
+body.dark-mode .generator-container,
+body.dark-mode .idea-container,
+body.dark-mode .saved-idea-card,
+body.dark-mode .contact-form,
+body.dark-mode .feature-card {
+    background-color: #1e1e1e;
+    box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4 {
+    color: white;
+}
+
+body.dark-mode .nav-link {
+    color: var(--mid-gray);
+}
+
+body.dark-mode .nav-link:hover, 
+body.dark-mode .nav-link.active {
+    color: var(--primary-color);
+}
+
+body.dark-mode .feature-icon {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea, 
+body.dark-mode select {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+body.dark-mode .generate-new {
+    background-color: #2a2a2a;
+    color: var(--light-gray);
+}
+
+body.dark-mode .tag {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .no-saved-ideas {
+    background-color: #1e1e1e;
 }
 
 /* Addition to the features we already had */
@@ -1485,5 +1463,33 @@ body.dark-mode .modal-content {
     to {
         transform: scale(4);
         opacity: 0;
+    }
+}
+
+
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 }
