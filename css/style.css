@@ -1432,32 +1432,6 @@ body.dark-mode .no-saved-ideas {
     background-color: #1e1e1e;
 }
 
-@keyframes zoomOut {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-}
-
-.fade-out {
-    animation: fadeOut 0.3s ease forwards;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-}
-
 /* Addition to the features we already had */
 .show {
     opacity: 1;
@@ -1489,5 +1463,33 @@ body.dark-mode .no-saved-ideas {
     to {
         transform: scale(4);
         opacity: 0;
+    }
+}
+
+
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 }
